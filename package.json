@@ -1,0 +1,42 @@
+{
+  "name": "express-nostr-auth",
+  "version": "1.0.0",
+  "description": "Express middleware for nostr http authorization using nip98",
+  "license": "MIT",
+  "author": "JB",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "test": "mocha",
+    "build": "npx tsc"
+  },
+  "files": [
+    "dist/src",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENCE",
+    "package.json"
+  ],
+  "dependencies": {
+    "express": "^5",
+    "nostr-tools": "^2"
+  },
+  "peerDependencies": {
+    "express": "^5",
+    "nostr-tools": "^2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.32.0",
+    "@types/express": "^5.0.3",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^24.1.0",
+    "@types/supertest": "^6.0.3",
+    "conventional-changelog": "^7.1.1",
+    "eslint": "^9.32.0",
+    "mocha": "^11.7.1",
+    "supertest": "^7.1.4",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.38.0"
+  }
+}
