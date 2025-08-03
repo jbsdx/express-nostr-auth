@@ -8,6 +8,7 @@
   "types": "dist/src/index.d.ts",
   "scripts": {
     "test": "mocha",
+    "version": "conventional-changelog && git add CHANGELOG.md",
     "build": "npx tsc"
   },
   "files": [
