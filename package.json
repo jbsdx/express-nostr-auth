@@ -3,9 +3,23 @@
   "version": "1.0.1",
   "description": "Express middleware for nostr http authorization using nip98",
   "license": "MIT",
-  "author": "JB",
+  "author": {
+    "name": "JB",
+    "email": "dev@jbnz.de",
+    "url": "https://github.com/jbsdx"
+  },
+  "keywords": [
+    "nostr",
+    "nodeJS",
+    "express",
+    "auth"
+  ],
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
+  "repository": {
+    "url": "https://github.com/jbsdx/express-nostr-auth",
+    "type": "github"
+  },
   "scripts": {
     "test": "mocha",
     "version": "conventional-changelog && git add CHANGELOG.md",
