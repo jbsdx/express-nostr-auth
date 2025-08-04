@@ -17,7 +17,7 @@ export interface NostrAuthOptions {
     /**
      * The field name in the express request object
      * 
-     * @default user
+     * @default nostr
      */
     persistPubkeyFieldName: string;
     /**
@@ -26,4 +26,26 @@ export interface NostrAuthOptions {
      * @default false
      */
     debug: boolean;
+}
+
+/**
+ * Nostr request options
+ */
+export interface NostrRequestOptions {
+    /**
+     * The nostr base64 auth token
+     */
+    token: string;
+    /**
+     * The protected request URL
+     */
+    requestUrl: string;
+    /**
+     * The request payload
+     */
+    body?: unknown;
+    /**
+     * The request method, e.g. "POST", "GET", ..
+     */
+    method: string;
 }
