@@ -24,6 +24,7 @@ app.use(
   nostrAuthorization({
     ttl: 60,
     debug: false,
+    persistPubkeyFieldName: "nostr",
     persistPubkey: true,
   })
 );
