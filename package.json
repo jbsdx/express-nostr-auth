@@ -11,6 +11,7 @@
   "keywords": [
     "nostr",
     "nodeJS",
+    "nip98",
     "express",
     "auth"
   ],
@@ -33,25 +34,25 @@
     "package.json"
   ],
   "dependencies": {
-    "express": "^5",
-    "nostr-tools": "^2"
+    "express": "^5.2.1",
+    "nostr-tools": "^2.23.1"
   },
   "peerDependencies": {
-    "express": "^5",
-    "nostr-tools": "^2"
+    "express": "^5.2.1",
+    "nostr-tools": "^2.23.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.32.0",
-    "@types/express": "^5.0.3",
+    "@eslint/js": "^10.0.1",
+    "@types/express": "^5.0.6",
     "@types/mocha": "^10.0.10",
-    "@types/node": "^24.1.0",
+    "@types/node": "^24.10.13",
     "@types/supertest": "^6.0.3",
     "conventional-changelog": "^7.1.1",
-    "eslint": "^9.32.0",
-    "mocha": "^11.7.1",
-    "supertest": "^7.1.4",
-    "tsx": "^4.20.3",
-    "typescript": "^5.8.3",
-    "typescript-eslint": "^8.38.0"
+    "eslint": "^10.0.0",
+    "mocha": "^11.7.5",
+    "supertest": "^7.2.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.0"
   }
 }
