@@ -21,7 +21,7 @@ describe('Test middleware function', () => {
             .set('authorization', 'Nostr thisisfake')
             .expect(401);
 
-        assert(res.body.error === 'Invalid padding: string should have whole number of bytes');
+        assert(res.body.error === 'padding: invalid, string should have whole number of bytes');
     });
 
     it('should return 401 on expired tokens', async () => {
