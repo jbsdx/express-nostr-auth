@@ -35,17 +35,17 @@
   ],
   "dependencies": {
     "express": "^5.2.1",
-    "nostr-tools": "^2.23.2"
+    "nostr-tools": "^2.23.3"
   },
   "peerDependencies": {
-    "express": "^5.2.1",
-    "nostr-tools": "^2.23.2"
+    "express": "5",
+    "nostr-tools": "2"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/express": "^5.0.6",
     "@types/mocha": "^10.0.10",
-    "@types/node": "^24.10.15",
+    "@types/node": "^24.11.0",
     "@types/supertest": "^6.0.3",
     "conventional-changelog": "^7.1.1",
     "eslint": "^10.0.2",
