@@ -39,34 +39,35 @@ Authorization: Nostr eyJraW5kIjoyNzIzNSwidGFnc==....
 Example: Generate the authorization token with your nostr bech32 secret key
 
 ```ts
-import { finalizeEvent } from "nostr-tools";
-import { decode, NSec } from "nostr-tools/nip19";
-import { getToken } from "nostr-tools/nip98";
-import { axios } from "axios";
+import { finalizeEvent, nip98, nip19 } from 'nostr-tools';
 
-// The nostr bech32 secret key
-const sk = process.env.NOSTR_PKEY as NSec;
+const apiRequest = async () => {
+    // The nostr bech32 secret key
+    const sk = process.env.NOSTR_PKEY as nip19.NSec;
 
-// decode to uint8 array
-const skBytes = decode(sk);
+    // decode to uint8 array
+    const skBytes = nip19.decode(sk);
 
-// the proctected api route
-const apiUrl = "http://localhost:3000/api/state";
+    // the proctected api route
+    const apiUrl = 'http://localhost:3000/api/state';
+    const method = 'GET';
 
-// generates nostr base64 token: Nostr eyJraW5kIjoyNzIzNSwidGFnc==....
-const token = await getToken(
-  apiUrl,
-  "GET",
-  (e) => finalizeEvent(e, skBytes.data),
-  true
-);
+    // generates nostr base64 token: Nostr eyJraW5kIjoyNzIzNSwidGFnc==....
+    const token = await nip98.getToken(
+        apiUrl,
+        method,
+        (e) => finalizeEvent(e, skBytes.data),
+        true
+    );
 
-// use the token in API requests to authorize with the nostr event
-axios.get(apiUrl, {
-  headers: {
-    authorization: token,
-  },
-});
+    // use the token in API requests to authorize with the nostr event
+    return fetch(apiUrl, {
+        method,
+        headers: {
+            Authorization: token
+        }
+    });
+};
 ```
 
 # Test
