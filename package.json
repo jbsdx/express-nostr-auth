@@ -22,7 +22,8 @@
     "type": "github"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "node -r ts-node/register --test ./test/**/*spec.ts",
+    "test:coverage": "node -r ts-node/register --experimental-test-coverage --test ./test/**/*spec.ts",
     "version": "conventional-changelog && git add CHANGELOG.md",
     "build": "npx tsc"
   },
@@ -34,8 +35,8 @@
     "package.json"
   ],
   "dependencies": {
-    "express": "^5.2.1",
-    "nostr-tools": "^2.23.3"
+    "express": "5",
+    "nostr-tools": "2"
   },
   "peerDependencies": {
     "express": "5",
@@ -44,14 +45,12 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/express": "^5.0.6",
-    "@types/mocha": "^10.0.10",
     "@types/node": "^24.11.0",
     "@types/supertest": "^6.0.3",
     "conventional-changelog": "^7.1.1",
     "eslint": "^10.0.2",
-    "mocha": "^11.7.5",
     "supertest": "^7.2.2",
-    "tsx": "^4.21.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.56.1"
   }
